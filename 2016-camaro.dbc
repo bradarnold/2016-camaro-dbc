@@ -58,6 +58,18 @@ BO_ 201 ECMEngineStatus: 8 Vector__XXX
 BO_ 485 PSCMSteeringAngle: 8 Vector__XXX
 	SG_ SteeringWheelAngle : 15|16@0- (0.0625,0) [-2047|2047] "deg" Vector__XXX
 
+BO_ 1322 Tire_Pressure_Sensors: 8 Vector__XXX
+	SG_ TireLFPrs : 23|8@0+ (4,0) [0|1020] "kPaG" Vector__XXX
+	SG_ TireLRPrs : 31|8@0+ (4,0) [0|1020] "kPaG" Vector__XXX
+	SG_ TireRFPrs : 39|8@0+ (4,0) [0|1020] "kPaG" Vector__XXX
+	SG_ TireRRPrs : 47|8@0+ (4,0) [0|1020] "kPaG" Vector__XXX
+
+BO_ 1323 Tire_Temperature_Sensors: 8 Vector__XXX
+	SG_ Tire_LF_Temp : 7|8@0+ (0.5,0) [0|0] "C" Vector__XXX
+	SG_ Tire_LR_Temp : 15|8@0+ (0.5,0) [0|0] "C" Vector__XXX
+	SG_ Tire_RF_Temp : 23|8@0+ (0.5,0) [0|0] "C" Vector__XXX
+	SG_ Tire_RR_Temp : 31|8@0+ (0.5,0) [0|0] "C" Vector__XXX
+
 
 CM_ BO_ 801 "Suspension Control Module";
 CM_ SG_ 801 RRPos "Right Rear Position Sensor";
@@ -70,6 +82,10 @@ CM_ SG_ 351 Clutch "Clutch Pedal Position";
 CM_ SG_ 501 Gear "Gear Selector Position D=N E=R";
 CM_ BO_ 201 "K20 ECM";
 CM_ BO_ 485 "PSCM";
+CM_ SG_ 1323 Tire_LF_Temp "Low Confidence";
+CM_ SG_ 1323 Tire_LR_Temp "Low Confidence";
+CM_ SG_ 1323 Tire_RF_Temp "Low Confidence";
+CM_ SG_ 1323 Tire_RR_Temp "Low Confidence";
 BA_DEF_ SG_  "SPN" INT 0 524287;
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
 BA_DEF_  "DatabaseVersion" STRING ;
@@ -85,4 +101,4 @@ BA_DEF_DEF_  "DatabaseCompiler" "";
 BA_ "ProtocolType" "J1939";
 BA_ "BusType" "CAN";
 BA_ "DatabaseCompiler" "CSS ELECTRONICS (WWW.CSSELECTRONICS.COM)";
-BA_ "DatabaseVersion" "1.0.0";
+BA_ "DatabaseVersion" "1.1.0";
