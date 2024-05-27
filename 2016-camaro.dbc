@@ -35,28 +35,25 @@ BS_:
 
 BU_:
 
+BO_ 201 ECMEngineStatus: 8 Vector__XXX
+	SG_ EngineTPS : 39|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
+	SG_ EngineRPM : 15|16@0+ (0.25,0) [0|0] "RPM" Vector__XXX
 
+BO_ 417 Throttle: 7 Vector__XXX
+	SG_ TPS : 55|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
 
+BO_ 485 PSCMSteeringAngle: 8 Vector__XXX
+	SG_ SteeringWheelAngle : 15|16@0- (0.0625,0) [-2047|2047] "deg" Vector__XXX
+
+BO_ 501 Trans: 8 Vector__XXX
+	SG_ Clutch : 63|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
+	SG_ Gear : 3|4@0+ (1,0) [0|14] "" Vector__XXX
 
 BO_ 801 SPM: 8 Vector__XXX
 	SG_ RRPos : 53|8@0- (-1.4147,53.307) [0|0] "mm" Vector__XXX
 	SG_ RFPos : 39|8@0- (-1.7052,77.6) [0|0] "mm" Vector__XXX
 	SG_ LFPos : 16|8@0- (-1.7052,77.6) [0|0] "mm" Vector__XXX
 	SG_ LRPos : 46|8@0- (-1.4147,53.307) [0|0] "mm" Vector__XXX
-
-BO_ 417 Throttle: 7 Vector__XXX
-	SG_ TPS : 55|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
-
-BO_ 501 Trans: 8 Vector__XXX
-	SG_ Clutch : 63|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
-	SG_ Gear : 3|4@0+ (1,0) [0|14] "" Vector__XXX
-
-BO_ 201 ECMEngineStatus: 8 Vector__XXX
-	SG_ EngineTPS : 39|8@0+ (0.3921568627,0) [0|100] "%" Vector__XXX
-	SG_ EngineRPM : 15|16@0+ (0.25,0) [0|0] "RPM" Vector__XXX
-
-BO_ 485 PSCMSteeringAngle: 8 Vector__XXX
-	SG_ SteeringWheelAngle : 15|16@0- (0.0625,0) [-2047|2047] "deg" Vector__XXX
 
 BO_ 1322 Tire_Pressure_Sensors: 8 Vector__XXX
 	SG_ TireLFPrs : 23|8@0+ (4,0) [0|1020] "kPaG" Vector__XXX
@@ -71,17 +68,17 @@ BO_ 1323 Tire_Temperature_Sensors: 8 Vector__XXX
 	SG_ Tire_RR_Temp : 31|8@0+ (0.5,0) [0|0] "C" Vector__XXX
 
 
+CM_ BO_ 201 "K20 ECM";
+CM_ BO_ 417 "Throttle Pedal Position";
+CM_ BO_ 485 "PSCM";
+CM_ BO_ 501 "Transmission Input";
+CM_ SG_ 501 Clutch "Clutch Pedal Position";
+CM_ SG_ 501 Gear "Gear Selector Position D=N E=R";
 CM_ BO_ 801 "Suspension Control Module";
 CM_ SG_ 801 RRPos "Right Rear Position Sensor";
 CM_ SG_ 801 RFPos "Left Rear Position Sensor";
 CM_ SG_ 801 LFPos "Left Front Position Sensor";
 CM_ SG_ 801 LRPos "Right Front Position Sensor";
-CM_ BO_ 417 "Throttle Pedal Position";
-CM_ BO_ 501 "Transmission Input";
-CM_ SG_ 351 Clutch "Clutch Pedal Position";
-CM_ SG_ 501 Gear "Gear Selector Position D=N E=R";
-CM_ BO_ 201 "K20 ECM";
-CM_ BO_ 485 "PSCM";
 CM_ SG_ 1323 Tire_LF_Temp "Low Confidence";
 CM_ SG_ 1323 Tire_LR_Temp "Low Confidence";
 CM_ SG_ 1323 Tire_RF_Temp "Low Confidence";
